@@ -22,7 +22,7 @@ app.get("/" , (req , res)=>{
 const live_Uri = "mongodb+srv://Esther:Esther2004@cluster0.byfqhoj.mongodb.net/product-store?retryWrites=true&w=majority&appName=Cluster0"
 const local_URI = "mongodb://localhost:27017/userAuth"
 
-mongoose.connect(local_URI)
+mongoose.connect(live_Uri)
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.error("Connection Error: ", err));
 
